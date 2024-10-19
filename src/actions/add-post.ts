@@ -4,7 +4,6 @@ import { auth } from "@/auth";
 import { db } from "@/db";
 import { paths } from "@/paths";
 import type { Post } from "@prisma/client";
-import { connect } from "http2";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
@@ -73,5 +72,5 @@ export async function addPost(
   }
 
   revalidatePath(paths.showTopic(slug));
-  redirect(paths.showPost(slug, parseInt(post.id)));
+  redirect(paths.showPost(slug, post.id));
 }
