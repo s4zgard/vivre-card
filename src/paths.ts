@@ -8,7 +8,7 @@ export const paths = {
   createPost(slug: string) {
     return `/topics/${slug}/posts/new`;
   },
-  showPost(slug: string, postId: number) {
+  showPost(slug: string, postId: string) {
     return `/topics/${slug}/posts/${postId}`;
   },
 };
